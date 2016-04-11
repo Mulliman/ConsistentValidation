@@ -1,6 +1,6 @@
-﻿namespace ConsistentValidation.Validators.RequiredValidators
+﻿namespace ConsistentValidation.Rules.Required
 {
-    public class RequiredValidator : IValidationRuleData
+    public class RequiredRuleData : IValidationRuleData
     {
         public string DefaultMessageFormat => "Please fill in the '{0}' field.";
 

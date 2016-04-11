@@ -2,8 +2,8 @@
 
 namespace ConsistentValidation.Mvc.Attributes
 {
-    public interface IConsistentValidationAttribute
+    public interface IConsistentValidationRuleAttribute
     {
-        IValidationRuleData RuleData { get; }
+        IValidationRule Rule { get;  }
     }
 }

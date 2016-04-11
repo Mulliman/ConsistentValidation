@@ -1,5 +1,5 @@
-﻿using ConsistentValidation.Validators;
-using ConsistentValidation.Validators.RequiredValidators;
+﻿using ConsistentValidation.Rules;
+using ConsistentValidation.Rules.Required;
 using System;
 using System.ComponentModel.DataAnnotations;
 
@@ -13,7 +13,7 @@ namespace ConsistentValidation.Mvc.Attributes
         {
             get
             {
-                return new RequiredValidator();
+                return new RequiredRuleData();
             }
         }
 

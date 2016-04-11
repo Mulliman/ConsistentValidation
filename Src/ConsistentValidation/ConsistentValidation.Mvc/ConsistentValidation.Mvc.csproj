@@ -68,8 +68,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\Financial\ConsistentCardSecurityCodeAttribute.cs" />
     <Compile Include="Attributes\IConsistentValidationAttribute.cs" />
-    <Compile Include="Attributes\ConsistentRequiredAttribute.cs" />
+    <Compile Include="Attributes\IConsistentValidationRuleAttribute.cs" />
+    <Compile Include="Attributes\Required\ConsistentRequiredAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationContextExtensions.cs" />
   </ItemGroup>

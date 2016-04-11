@@ -1,4 +1,4 @@
-﻿using ConsistentValidation.Validators;
+﻿using ConsistentValidation.Rules;
 
 namespace ConsistentValidation.Messages
 {

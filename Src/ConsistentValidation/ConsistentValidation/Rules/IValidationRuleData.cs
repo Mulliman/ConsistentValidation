@@ -1,4 +1,4 @@
-﻿namespace ConsistentValidation.Validators
+﻿namespace ConsistentValidation.Rules
 {
     public interface IValidationRuleData
     {
