@@ -4,6 +4,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ConsistentValidation.Mvc.Attributes.Financial
 {
+    /// <summary>
+    /// This validates the 3 digit code that appears on the back of credit and debit cards.
+    /// </summary>
+    /// <remarks>Accepts: string only. Can have leading 0 so int not valid.</remarks>
     public class ConsistentCardSecurityCodeAttribute : ValidationAttribute, IConsistentValidationRuleAttribute
     {
         private string _displayName;

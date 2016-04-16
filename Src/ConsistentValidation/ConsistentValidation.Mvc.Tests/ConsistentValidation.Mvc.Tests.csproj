@@ -67,6 +67,7 @@
     <Compile Include="Attributes\Dates\DateInbetweenAttributeTests.cs" />
     <Compile Include="Attributes\Dates\DateBeforeAttributeTests.cs" />
     <Compile Include="Attributes\Dates\DateAfterAttributeTests.cs" />
+    <Compile Include="Attributes\Financial\CardSecurityCodeAttributeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

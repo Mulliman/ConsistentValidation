@@ -2,6 +2,10 @@
 
 namespace ConsistentValidation.Rules.Financial
 {
+    /// <summary>
+    /// This validates the 3 digit code that appears on the back of credit and debit cards.
+    /// </summary>
+    /// <remarks>Accepts: string only. Can have leading 0 so int not valid.</remarks>
     public class CardSecurityCodeRule : IValidationRule
     {
         public const int MinLength = 3;
