@@ -3,9 +3,9 @@ using System;
 
 namespace ConsistentValidation.Rules.Dates
 {
-    public class YearRule : YearRuleBase, IValidationRule
+    public class Year4DigitRule : YearRuleBase, IValidationRule
     {
-        public string DefaultMessageFormat => "Please fill in the '{0}' field with a valid year.";
+        public string DefaultMessageFormat => "Please fill in the '{0}' field with a valid 4 digit year.";
 
         public string MessageId => "Year";
 
@@ -14,6 +14,13 @@ namespace ConsistentValidation.Rules.Dates
             if (rawValue == null)
             {
                 return true;
+            }
+
+            var nullableInt = rawValue as int?;
+
+            if (nullableInt.HasValue)
+            {
+                return IsAValid4DigitYear(nullableInt.Value);
             }
 
             var stringValue = Convert.ToString(rawValue);

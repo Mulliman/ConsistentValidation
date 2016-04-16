@@ -10,5 +10,10 @@ namespace ConsistentValidation.Rules.Dates.BaseRules
         {
             return YearRegex.IsMatch(year);
         }
+
+        protected bool IsAValid4DigitYear(int year)
+        {
+            return year >= 1000 && year <= 9999;
+        }
     }
 }

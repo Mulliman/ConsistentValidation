@@ -60,7 +60,7 @@
     <Compile Include="Rules\Dates\YearCurrentOrInPastRule.cs" />
     <Compile Include="Rules\Dates\YearInFutureRule.cs" />
     <Compile Include="Rules\Dates\YearInPastRule.cs" />
-    <Compile Include="Rules\Dates\YearRule.cs" />
+    <Compile Include="Rules\Dates\Year4DigitRule.cs" />
     <Compile Include="Rules\Financial\CardSecurityCodeRule.cs" />
     <Compile Include="Rules\RuleMetaData\IMaxLength.cs" />
     <Compile Include="Rules\IValidationRule.cs" />

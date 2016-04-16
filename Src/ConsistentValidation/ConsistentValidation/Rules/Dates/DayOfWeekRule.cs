@@ -22,7 +22,7 @@ namespace ConsistentValidation.Rules.Dates
             }
             catch (ArgumentException)
             {
-                // Date is in an invalid format.
+                // Int is in an invalid format.
                 return false;
             }
 

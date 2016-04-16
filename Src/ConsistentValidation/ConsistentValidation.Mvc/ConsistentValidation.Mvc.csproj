@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\Dates\ConsistentYear4DigitAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentYearInPastAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentYearCurrentOrInPastAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentYearInFutureAttribute.cs" />
