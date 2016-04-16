@@ -54,6 +54,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Attributes\AttributeTestBase.cs" />
+    <Compile Include="Attributes\Dates\DayAttributeTests.cs" />
     <Compile Include="Attributes\Dates\DayOfWeekAttributeTests.cs" />
     <Compile Include="Attributes\Dates\DateInPastAttributeTests.cs" />
     <Compile Include="Attributes\Dates\DateInFutureAttributeTests.cs" />

@@ -82,7 +82,7 @@ namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
         #region Boundary Cases
 
         [TestMethod]
-        public void DayOfWeekAttributeTests_WhenDayOfWeekToValidateIsSunday_FromString_ItShouldNotBeValid()
+        public void DayOfWeekAttributeTests_WhenDayOfWeekToValidateIsSunday_FromString_ItShouldBeValid()
         {
             var model = new DayOfWeekStringModel
             {
@@ -95,7 +95,7 @@ namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
         }
 
         [TestMethod]
-        public void DayOfWeekAttributeTests_WhenDayOfWeekToValidateIsSunday_FromInt_ItShouldNotBeValid()
+        public void DayOfWeekAttributeTests_WhenDayOfWeekToValidateIsSunday_FromInt_ItShouldBeValid()
         {
             var model = new DayOfWeekIntModel
             {
@@ -108,7 +108,7 @@ namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
         }
 
         [TestMethod]
-        public void DayOfWeekAttributeTests_WhenDayOfWeekToValidateIsSaturday_FromString_ItShouldNotBeValid()
+        public void DayOfWeekAttributeTests_WhenDayOfWeekToValidateIsSaturday_FromString_ItShouldBeValid()
         {
             var model = new DayOfWeekStringModel
             {
@@ -121,7 +121,7 @@ namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
         }
 
         [TestMethod]
-        public void DayOfWeekAttributeTests_WhenDayOfWeekToValidateIsSaturday_FromInt_ItShouldNotBeValid()
+        public void DayOfWeekAttributeTests_WhenDayOfWeekToValidateIsSaturday_FromInt_ItShouldBeValid()
         {
             var model = new DayOfWeekIntModel
             {
