@@ -38,7 +38,7 @@ namespace ConsistentValidation.Rules.Dates
                 return true;
             }
 
-            return date > _startDate && date < _endDate;
+            return date >= _startDate && date <= _endDate;
         }
     }
 }
