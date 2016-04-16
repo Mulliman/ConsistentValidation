@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\Dates\ConsistentDayOfWeekAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentDateInPastAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentDateInFutureAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentDateInbetweenAttribute.cs" />

@@ -14,22 +14,22 @@ namespace ConsistentValidation.Rules.Dates
 
         public bool IsValid(object rawValue)
         {
-            if (rawValue == null)
+            int? dayOfWeek;
+
+            try
             {
-                return true;
+                dayOfWeek = rawValue.GetIntFromRawObject();
             }
-
-            var stringValue = Convert.ToString(rawValue);
-
-            if (string.IsNullOrEmpty(stringValue))
+            catch (ArgumentException)
             {
-                return true;
-            }
-
-            int dayOfWeek;
-            if (!int.TryParse(stringValue, out dayOfWeek))
-            {
+                // Date is in an invalid format.
                 return false;
+            }
+
+            if (dayOfWeek == null)
+            {
+                // If empty, let the required validation handle those messages.
+                return true;
             }
 
             return dayOfWeek >= 0 && dayOfWeek <= 6;

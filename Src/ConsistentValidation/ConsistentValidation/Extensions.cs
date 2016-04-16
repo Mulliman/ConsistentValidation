@@ -23,5 +23,70 @@ namespace ConsistentValidation
 
             return date;
         }
+
+        public static DateTime? GetDateTimeFromRawObject(this object raw)
+        {
+            if (raw == null)
+            {
+                return null;
+            }
+
+            var nullableDate = raw as DateTime?;
+
+            if (nullableDate.HasValue)
+            {
+                return nullableDate;
+            }
+
+            var stringDate = raw as string;
+
+            if (string.IsNullOrEmpty(stringDate))
+            {
+                return null;
+            }
+
+            DateTime dateFromString;
+            // TODO: Maybe improve to have different formats.
+            var isValid = DateTime.TryParse(stringDate, out dateFromString);
+
+            if (!isValid)
+            {
+                throw new ArgumentException("Date is not valid");
+            }
+
+            return dateFromString;
+        }
+
+        public static int? GetIntFromRawObject(this object raw)
+        {
+            if (raw == null)
+            {
+                return null;
+            }
+
+            var nullableInt = raw as int?;
+
+            if (nullableInt.HasValue)
+            {
+                return nullableInt;
+            }
+
+            var stringInt = raw as string;
+
+            if (string.IsNullOrEmpty(stringInt))
+            {
+                return null;
+            }
+
+            int intFromString;
+            var isValid = int.TryParse(stringInt, out intFromString);
+
+            if (!isValid)
+            {
+                throw new ArgumentException("Int is not valid");
+            }
+
+            return intFromString;
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace ConsistentValidation.Rules.Dates
 
             try
             {
-                date = GetDateTimeFromRawObject(rawValue);
+                date = rawValue.GetDateTimeFromRawObject();
             }
             catch (ArgumentException)
             {
