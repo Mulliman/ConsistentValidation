@@ -68,6 +68,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\Dates\ConsistentDateInPastAttribute.cs" />
+    <Compile Include="Attributes\Dates\ConsistentDateInFutureAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentDateInbetweenAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentDateBeforeAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentDateAfterAttribute.cs" />

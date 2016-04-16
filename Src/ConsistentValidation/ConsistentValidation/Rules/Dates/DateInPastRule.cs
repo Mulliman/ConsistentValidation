@@ -29,7 +29,7 @@ namespace ConsistentValidation.Rules.Dates
                 return true;
             }
 
-            return date < DateTime.Now;
+            return date < DateTime.Now.Date;
         }
     }
 }
