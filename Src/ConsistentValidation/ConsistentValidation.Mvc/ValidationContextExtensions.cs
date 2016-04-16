@@ -21,7 +21,7 @@ namespace ConsistentValidation.Mvc
                 .GetProperty(validationContext.MemberName)
                 .GetCustomAttributes(typeof(DisplayNameAttribute), true);
 
-            return attributes != null
+            return attributes != null && attributes.Length > 0
                 ? (attributes[0] as DisplayNameAttribute).DisplayName
                 : validationContext.DisplayName;
         }

@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Configuration.cs" />
     <Compile Include="Caching\IMessageCache.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Messages\DefaultMessageProvider.cs" />
     <Compile Include="Messages\IMessageProvider.cs" />
     <Compile Include="Caching\NoCacheProvider.cs" />
