@@ -68,6 +68,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\Dates\ConsistentYearInPastAttribute.cs" />
+    <Compile Include="Attributes\Dates\ConsistentYearCurrentOrInPastAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentYearInFutureAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentYearCurrentOrInFutureAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentMonthAttribute.cs" />

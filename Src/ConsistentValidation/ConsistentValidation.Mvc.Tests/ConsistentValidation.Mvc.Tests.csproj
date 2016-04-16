@@ -54,6 +54,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Attributes\AttributeTestBase.cs" />
+    <Compile Include="Attributes\Dates\YearCurrentOrInPastAttributeTests.cs" />
+    <Compile Include="Attributes\Dates\YearInPastAttributeTests.cs" />
     <Compile Include="Attributes\Dates\YearInFutureAttributeTests.cs" />
     <Compile Include="Attributes\Dates\YearCurrentOrInFutureAttributeTests.cs" />
     <Compile Include="Attributes\Dates\MonthAttributeTests.cs" />
