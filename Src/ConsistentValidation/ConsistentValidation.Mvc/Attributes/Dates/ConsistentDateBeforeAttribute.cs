@@ -5,6 +5,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ConsistentValidation.Mvc.Attributes.Dates
 {
+    /// <summary>
+    /// This ensures that a date is after a date specified by the developer.
+    /// </summary>
+    /// <remarks>Accepts: string and DateTime.</remarks>
     public class ConsistentDateBeforeAttribute : ValidationAttribute, IConsistentValidationRuleAttribute
     {
         private string _displayName;

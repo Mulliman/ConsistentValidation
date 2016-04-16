@@ -5,8 +5,9 @@ using System.ComponentModel.DataAnnotations;
 namespace ConsistentValidation.Mvc.Attributes.Dates
 {
     /// <summary>
-    /// Works on int, int? and strings.
+    /// This ensures that a day of the month is valid
     /// </summary>
+    /// <remarks>Accepts: string and int.</remarks>
     public class ConsistentDayAttribute : ValidationAttribute, IConsistentValidationRuleAttribute
     {
         private string _displayName;

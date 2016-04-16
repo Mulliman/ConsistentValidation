@@ -3,6 +3,11 @@ using System;
 
 namespace ConsistentValidation.Rules.Dates
 {
+    /// <summary>
+    /// This ensures that a date is inbetween two dates specified by the developer.
+    /// The dates specified are included in the range.
+    /// </summary>
+    /// <remarks>Accepts: string and DateTime.</remarks>
     public class DateInbetweenRule : DateRuleBase, IValidationRule
     {
         private readonly DateTime _startDate;

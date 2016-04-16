@@ -3,6 +3,10 @@ using System;
 
 namespace ConsistentValidation.Rules.Dates
 {
+    /// <summary>
+    /// This ensures that a date is before a date specified by the developer.
+    /// </summary>
+    /// <remarks>Accepts: string and DateTime.</remarks>
     public class DateBeforeRule : DateRuleBase, IValidationRule
     {
         private readonly DateTime _endDate;

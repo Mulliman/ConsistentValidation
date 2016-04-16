@@ -5,8 +5,10 @@ using System.ComponentModel.DataAnnotations;
 namespace ConsistentValidation.Mvc.Attributes.Dates
 {
     /// <summary>
-    /// Works on int, int? and strings.
+    /// This checks the integer representation of the day of the week.
+    /// 0 = Sunday to 6 = Saturday
     /// </summary>
+    /// <remarks>Accepts: string and int.</remarks>
     public class ConsistentDayOfWeekAttribute : ValidationAttribute, IConsistentValidationRuleAttribute
     {
         private string _displayName;

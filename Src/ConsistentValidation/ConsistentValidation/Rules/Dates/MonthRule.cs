@@ -2,6 +2,10 @@
 
 namespace ConsistentValidation.Rules.Dates
 {
+    /// <summary>
+    /// This ensures that a month is valid
+    /// </summary>
+    /// <remarks>Accepts: string and int.</remarks>
     public class MonthRule : IValidationRule
     {
         public string DefaultMessageFormat => "Please fill in the '{0}' field with a valid month.";

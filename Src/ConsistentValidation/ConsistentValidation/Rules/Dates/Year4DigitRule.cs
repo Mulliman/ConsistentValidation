@@ -3,6 +3,10 @@ using System;
 
 namespace ConsistentValidation.Rules.Dates
 {
+    /// <summary>
+    /// This ensures that 4 digit year is valid
+    /// </summary>
+    /// <remarks>Accepts: string and int.</remarks>
     public class Year4DigitRule : YearRuleBase, IValidationRule
     {
         public string DefaultMessageFormat => "Please fill in the '{0}' field with a valid 4 digit year.";

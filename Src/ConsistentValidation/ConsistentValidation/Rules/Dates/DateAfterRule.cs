@@ -3,6 +3,10 @@ using System;
 
 namespace ConsistentValidation.Rules.Dates
 {
+    /// <summary>
+    /// This ensures that a date is after a date specified by the developer.
+    /// </summary>
+    /// <remarks>Accepts: string and DateTime.</remarks>
     public class DateAfterRule : DateRuleBase, IValidationRule
     {
         private readonly DateTime _startDate;

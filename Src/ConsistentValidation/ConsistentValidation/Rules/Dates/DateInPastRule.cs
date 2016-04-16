@@ -3,6 +3,10 @@ using System;
 
 namespace ConsistentValidation.Rules.Dates
 {
+    /// <summary>
+    /// This ensures that a date is before todays date.
+    /// </summary>
+    /// <remarks>Accepts: string and DateTime.</remarks>
     public class DateInPastRule : DateRuleBase, IValidationRule
     {
         public string DefaultMessageFormat => "Please fill in the '{0}' field with a valid date in the past.";

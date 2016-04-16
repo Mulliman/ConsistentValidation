@@ -4,6 +4,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ConsistentValidation.Mvc.Attributes.Dates
 {
+    /// <summary>
+    /// This ensures that a date is after todays date.
+    /// </summary>
+    /// <remarks>Accepts: string and DateTime.</remarks>
     public class ConsistentDateInFutureAttribute : ValidationAttribute, IConsistentValidationRuleAttribute
     {
         private string _displayName;

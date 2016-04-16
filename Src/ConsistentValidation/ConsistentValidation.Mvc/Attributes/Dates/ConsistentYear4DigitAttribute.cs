@@ -5,8 +5,9 @@ using System.ComponentModel.DataAnnotations;
 namespace ConsistentValidation.Mvc.Attributes.Dates
 {
     /// <summary>
-    /// Works on strings.
+    /// This ensures that 4 digit year is valid
     /// </summary>
+    /// <remarks>Accepts: string and int.</remarks>
     public class ConsistentYear4DigitAttribute : ValidationAttribute, IConsistentValidationRuleAttribute
     {
         private string _displayName;

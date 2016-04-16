@@ -5,6 +5,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ConsistentValidation.Mvc.Attributes.Dates
 {
+    /// <summary>
+    /// This ensures that a date is inbetween two dates specified by the developer.
+    /// The dates specified are included in the range.
+    /// </summary>
+    /// <remarks>Accepts: string and DateTime.</remarks>
     public class ConsistentDateInbetweenAttribute : ValidationAttribute, IConsistentValidationRuleAttribute
     {
         private string _displayName;

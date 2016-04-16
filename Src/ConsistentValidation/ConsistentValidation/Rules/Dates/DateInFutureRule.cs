@@ -3,6 +3,10 @@ using System;
 
 namespace ConsistentValidation.Rules.Dates
 {
+    /// <summary>
+    /// This ensures that a date is after todays date.
+    /// </summary>
+    /// <remarks>Accepts: string and DateTime.</remarks>
     public class DateInFutureRule : DateRuleBase, IValidationRule
     {
         public string DefaultMessageFormat => "Please fill in the '{0}' field with a valid date in the future.";

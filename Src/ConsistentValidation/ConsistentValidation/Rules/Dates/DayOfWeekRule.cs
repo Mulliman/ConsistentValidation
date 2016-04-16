@@ -6,6 +6,7 @@ namespace ConsistentValidation.Rules.Dates
     /// This checks the integer representation of the day of the week.
     /// 0 = Sunday to 6 = Saturday
     /// </summary>
+    /// <remarks>Accepts: string and int.</remarks>
     public class DayOfWeekRule : IValidationRule
     {
         public string DefaultMessageFormat => "Please fill in the '{0}' field with a valid day of the week.";

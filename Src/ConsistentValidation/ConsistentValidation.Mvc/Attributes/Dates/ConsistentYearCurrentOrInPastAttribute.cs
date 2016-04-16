@@ -5,8 +5,9 @@ using System.ComponentModel.DataAnnotations;
 namespace ConsistentValidation.Mvc.Attributes.Dates
 {
     /// <summary>
-    /// Works on int, int? and strings.
+    /// This ensures that the year specified is either this year, or one in the past
     /// </summary>
+    /// <remarks>Accepts: string and int.</remarks>
     public class ConsistentYearCurrentOrInPastAttribute : ValidationAttribute, IConsistentValidationRuleAttribute
     {
         private string _displayName;
