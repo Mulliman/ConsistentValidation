@@ -32,7 +32,7 @@ namespace ConsistentValidation.Mvc.Attributes
 
         public override string FormatErrorMessage(string name)
         {
-            return string.Format(ErrorMessageString, _displayName);
+            return string.Format(ErrorMessage, _displayName);
         }
     }
 }

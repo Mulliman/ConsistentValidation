@@ -28,12 +28,12 @@ namespace ConsistentValidation.Mvc.Attributes.Financial
 
             return isValid 
                 ? ValidationResult.Success
-                : new ValidationResult(ErrorMessage);
+                : new ValidationResult(FormatErrorMessage(_displayName));
         }
 
         public override string FormatErrorMessage(string name)
         {
-            return string.Format(ErrorMessageString, _displayName);
+            return string.Format(ErrorMessage, _displayName);
         }
     }
 }
