@@ -6,28 +6,28 @@ using System;
 namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
 {
     [TestClass]
-    public class DateAfterAttributeTests : AttributeTestBase
+    public class DateBeforeAttributeTests : AttributeTestBase
     {
-        public class DateAfterModelStringDate
+        public class DateBeforeModelStringDate
         {
-            [ConsistentDateAfter("2000-01-01")]
+            [ConsistentDateBefore("2000-01-01")]
             public string DateToTest { get; set; }
         }
 
-        public class DateAfterModelDateTimeDate
+        public class DateBeforeModelDateTimeDate
         {
-            [ConsistentDateAfter("2000-01-01")]
+            [ConsistentDateBefore("2000-01-01")]
             public DateTime DateToTest { get; set; }
         }
 
         #region Valid Cases
 
         [TestMethod]
-        public void DateAfterAttributeTests_WhenDateToValidateIsAfterSetDate_FromString_ItShouldBeValid()
+        public void DateBeforeAttributeTests_WhenDateToValidateIsBeforeSetDate_FromString_ItShouldBeValid()
         {
-            var model = new DateAfterModelStringDate
+            var model = new DateBeforeModelStringDate
             {
-                DateToTest = "2001-01-01"
+                DateToTest = "1999-01-01"
             };
 
             var errors = ValidateModel(model);
@@ -36,11 +36,11 @@ namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
         }
 
         [TestMethod]
-        public void DateAfterAttributeTests_WhenDateToValidateIsAfterSetDate_FromDateTime_ItShouldBeValid()
+        public void DateBeforeAttributeTests_WhenDateToValidateIsBeforeSetDate_FromDateTime_ItShouldBeValid()
         {
-            var model = new DateAfterModelDateTimeDate
+            var model = new DateBeforeModelDateTimeDate
             {
-                DateToTest = new DateTime(2001,01,01)
+                DateToTest = new DateTime(1999,01,01)
             };
 
             var errors = ValidateModel(model);
@@ -53,11 +53,11 @@ namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
         #region Invalid Cases
 
         [TestMethod]
-        public void DateAfterAttributeTests_WhenDateToValidateIsBeforeSetDate_FromString_ItShouldNotBeValid()
+        public void DateBeforeAttributeTests_WhenDateToValidateIsBeforeSetDate_FromString_ItShouldNotBeValid()
         {
-            var model = new DateAfterModelStringDate
+            var model = new DateBeforeModelStringDate
             {
-                DateToTest = "1999-01-01"
+                DateToTest = "2001-01-01"
             };
 
             var errors = ValidateModel(model);
@@ -66,11 +66,11 @@ namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
         }
 
         [TestMethod]
-        public void DateAfterAttributeTests_WhenDateToValidateIsBeforeSetDate_FromDateTime_ItShouldNotBeValid()
+        public void DateBeforeAttributeTests_WhenDateToValidateIsBeforeSetDate_FromDateTime_ItShouldNotBeValid()
         {
-            var model = new DateAfterModelDateTimeDate
+            var model = new DateBeforeModelDateTimeDate
             {
-                DateToTest = new DateTime(1999, 01, 01)
+                DateToTest = new DateTime(2001, 01, 01)
             };
 
             var errors = ValidateModel(model);
@@ -83,9 +83,9 @@ namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
         #region Boundary Cases
 
         [TestMethod]
-        public void DateAfterAttributeTests_WhenDateToValidateIsEqualToSetDate_FromString_ItShouldNotBeValid()
+        public void DateBeforeAttributeTests_WhenDateToValidateIsEqualToSetDate_FromString_ItShouldNotBeValid()
         {
-            var model = new DateAfterModelStringDate
+            var model = new DateBeforeModelStringDate
             {
                 DateToTest = "2000-01-01"
             };
@@ -96,9 +96,9 @@ namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
         }
 
         [TestMethod]
-        public void DateAfterAttributeTests_WhenDateToValidateIsEqualToSetDate_FromDateTime_ItShouldNotBeValid()
+        public void DateBeforeAttributeTests_WhenDateToValidateIsEqualToSetDate_FromDateTime_ItShouldNotBeValid()
         {
-            var model = new DateAfterModelDateTimeDate
+            var model = new DateBeforeModelDateTimeDate
             {
                 DateToTest = new DateTime(2000, 01, 01)
             };
@@ -109,11 +109,11 @@ namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
         }
 
         [TestMethod]
-        public void DateAfterAttributeTests_WhenDateToValidateOneDayAfterSetDate_FromString_ItShouldBeValid()
+        public void DateBeforeAttributeTests_WhenDateToValidateOneDayBeforeSetDate_FromString_ItShouldBeValid()
         {
-            var model = new DateAfterModelStringDate
+            var model = new DateBeforeModelStringDate
             {
-                DateToTest = "2000-01-02"
+                DateToTest = "1999-12-31"
             };
 
             var errors = ValidateModel(model);
@@ -122,11 +122,11 @@ namespace ConsistentValidation.Mvc.Tests.Attributes.Dates
         }
 
         [TestMethod]
-        public void DateAfterAttributeTests_WhenDateToValidateOneDayAfterSetDate_FromDateTime_ItShouldBeValid()
+        public void DateBeforeAttributeTests_WhenDateToValidateOneDayBeforeSetDate_FromDateTime_ItShouldBeValid()
         {
-            var model = new DateAfterModelDateTimeDate
+            var model = new DateBeforeModelDateTimeDate
             {
-                DateToTest = new DateTime(2000, 01, 02)
+                DateToTest = new DateTime(1999, 12, 31)
             };
 
             var errors = ValidateModel(model);
