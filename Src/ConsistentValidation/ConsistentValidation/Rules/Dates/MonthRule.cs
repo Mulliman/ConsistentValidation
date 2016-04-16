@@ -10,22 +10,22 @@ namespace ConsistentValidation.Rules.Dates
 
         public bool IsValid(object rawValue)
         {
-            if (rawValue == null)
+            int? month;
+
+            try
             {
-                return true;
+                month = rawValue.GetIntFromRawObject();
             }
-
-            var stringValue = Convert.ToString(rawValue);
-
-            if (string.IsNullOrEmpty(stringValue))
+            catch (ArgumentException)
             {
-                return true;
-            }
-
-            int month;
-            if (!int.TryParse(stringValue, out month))
-            {
+                // Int is in an invalid format.
                 return false;
+            }
+
+            if (month == null)
+            {
+                // Leave required validation to specialist rules.
+                return true;
             }
 
             return month >= 1 && month <= 12;

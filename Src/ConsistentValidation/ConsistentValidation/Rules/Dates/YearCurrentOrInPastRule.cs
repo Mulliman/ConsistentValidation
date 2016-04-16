@@ -10,22 +10,22 @@ namespace ConsistentValidation.Rules.Dates
 
         public bool IsValid(object rawValue)
         {
-            if (rawValue == null)
+            int? year;
+
+            try
             {
-                return true;
+                year = rawValue.GetIntFromRawObject();
             }
-
-            var stringValue = Convert.ToString(rawValue);
-
-            if (string.IsNullOrEmpty(stringValue))
+            catch (ArgumentException)
             {
-                return true;
-            }
-
-            int year;
-            if (!int.TryParse(stringValue, out year))
-            {
+                // Int is in an invalid format.
                 return false;
+            }
+
+            if (year == null)
+            {
+                // Leave required validation to specialist rules.
+                return true;
             }
 
             return year <= DateTime.Now.Year;
