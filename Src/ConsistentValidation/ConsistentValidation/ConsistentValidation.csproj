@@ -45,6 +45,7 @@
     <Compile Include="Messages\DefaultMessageProvider.cs" />
     <Compile Include="Messages\IMessageProvider.cs" />
     <Compile Include="Caching\NoCacheProvider.cs" />
+    <Compile Include="Messages\MessageResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rules\Dates\BaseRules\DateRuleBase.cs" />
     <Compile Include="Rules\Dates\BaseRules\YearRuleBase.cs" />
