@@ -1,4 +1,5 @@
-﻿using ConsistentValidation.Rules;
+﻿using ConsistentValidation.Messages;
+using ConsistentValidation.Rules;
 using ConsistentValidation.Rules.Financial;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,8 +15,9 @@ namespace ConsistentValidation.Mvc.Attributes.Financial
 
         public ConsistentCardSecurityCodeAttribute()
         {
-            ErrorMessage = Configuration.MessageCache.GetMessageFromCacheFor(Rule.MessageId)
-                ?? Configuration.MessageProvider.GetMessageFor(Rule);
+            var resolver = new MessageResolver(Configuration.MessageProvider, Configuration.MessageCache);
+
+            ErrorMessage = resolver.GetMessage(Rule);
         }
 
         public IValidationRule Rule { get; } = new CardSecurityCodeRule();

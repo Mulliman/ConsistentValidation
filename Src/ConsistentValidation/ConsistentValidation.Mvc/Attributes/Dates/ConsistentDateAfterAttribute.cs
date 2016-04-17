@@ -1,4 +1,5 @@
-﻿using ConsistentValidation.Rules;
+﻿using ConsistentValidation.Messages;
+using ConsistentValidation.Rules;
 using ConsistentValidation.Rules.Dates;
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -19,8 +20,9 @@ namespace ConsistentValidation.Mvc.Attributes.Dates
             _startDate = startDate.ToDateTimeUsingConfigurationFormat();
             Rule = new DateAfterRule(_startDate);
 
-            ErrorMessage = Configuration.MessageCache.GetMessageFromCacheFor(Rule.MessageId)
-                ?? Configuration.MessageProvider.GetMessageFor(Rule);
+            var resolver = new MessageResolver(Configuration.MessageProvider, Configuration.MessageCache);
+
+            ErrorMessage = resolver.GetMessage(Rule);
         }
 
         public IValidationRule Rule { get; private set; }

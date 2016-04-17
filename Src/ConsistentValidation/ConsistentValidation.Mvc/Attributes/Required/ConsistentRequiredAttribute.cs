@@ -1,11 +1,11 @@
-﻿using ConsistentValidation.Rules;
+﻿using ConsistentValidation.Messages;
+using ConsistentValidation.Rules;
 using ConsistentValidation.Rules.Required;
-using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace ConsistentValidation.Mvc.Attributes
 {
-    public class ConsistentRequiredAttribute : System.ComponentModel.DataAnnotations.RequiredAttribute, IConsistentValidationAttribute
+    public class ConsistentRequiredAttribute : RequiredAttribute, IConsistentValidationAttribute
     {
         private string _displayName;
 
@@ -19,8 +19,9 @@ namespace ConsistentValidation.Mvc.Attributes
 
         public ConsistentRequiredAttribute()
         {
-            ErrorMessage = Configuration.MessageCache.GetMessageFromCacheFor(RuleData.MessageId)
-                ?? Configuration.MessageProvider.GetMessageFor(RuleData);
+            var resolver = new MessageResolver(Configuration.MessageProvider, Configuration.MessageCache);
+
+            ErrorMessage = resolver.GetMessage(RuleData);
         }
 
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
