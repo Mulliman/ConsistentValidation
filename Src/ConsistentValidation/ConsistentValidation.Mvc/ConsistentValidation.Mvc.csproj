@@ -69,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\ConsistentRuleDataTypeAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentYear4DigitAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentYearInPastAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentYearCurrentOrInPastAttribute.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Attributes\Dates\ConsistentDateBeforeAttribute.cs" />
     <Compile Include="Attributes\Dates\ConsistentDateAfterAttribute.cs" />
     <Compile Include="Attributes\Financial\ConsistentCardSecurityCodeAttribute.cs" />
+    <Compile Include="Attributes\Financial\ConsistentCreditOrDebitCardAttribute.cs" />
     <Compile Include="Attributes\IConsistentValidationAttribute.cs" />
     <Compile Include="Attributes\IConsistentValidationRuleAttribute.cs" />
     <Compile Include="Attributes\Required\ConsistentRequiredAttribute.cs" />

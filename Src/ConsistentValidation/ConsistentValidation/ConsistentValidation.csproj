@@ -62,12 +62,15 @@
     <Compile Include="Rules\Dates\YearInFutureRule.cs" />
     <Compile Include="Rules\Dates\YearInPastRule.cs" />
     <Compile Include="Rules\Dates\Year4DigitRule.cs" />
+    <Compile Include="Rules\Ensure.cs" />
     <Compile Include="Rules\Financial\CardSecurityCodeRule.cs" />
+    <Compile Include="Rules\Financial\CreditOrDebitCardRule.cs" />
     <Compile Include="Rules\RuleMetaData\IMaxLength.cs" />
     <Compile Include="Rules\IValidationRule.cs" />
     <Compile Include="Rules\IValidationRuleData.cs" />
     <Compile Include="Rules\Required\RequiredRuleData.cs" />
     <Compile Include="Rules\RuleMetaData\IMinLength.cs" />
+    <Compile Include="Rules\ValidationRuleBase.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
