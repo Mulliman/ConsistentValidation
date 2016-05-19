@@ -16,6 +16,11 @@ namespace ConsistentValidation.Rules
 
         protected void EnsureThatPropertyIsValidType(object property)
         {
+            if(property == null)
+            {
+                return;
+            }
+
             foreach (var type in AllowedTypes)
             {
                 if (type.IsInstanceOfType(property))
