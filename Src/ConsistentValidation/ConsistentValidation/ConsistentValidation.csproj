@@ -65,6 +65,7 @@
     <Compile Include="Rules\Ensure.cs" />
     <Compile Include="Rules\Financial\CardSecurityCodeRule.cs" />
     <Compile Include="Rules\Financial\CreditOrDebitCardRule.cs" />
+    <Compile Include="Rules\Names\FirstNameRule.cs" />
     <Compile Include="Rules\RuleMetaData\IMaxLength.cs" />
     <Compile Include="Rules\IValidationRule.cs" />
     <Compile Include="Rules\IValidationRuleData.cs" />

@@ -87,6 +87,7 @@
     <Compile Include="Attributes\Financial\ConsistentCreditOrDebitCardAttribute.cs" />
     <Compile Include="Attributes\IConsistentValidationAttribute.cs" />
     <Compile Include="Attributes\IConsistentValidationRuleAttribute.cs" />
+    <Compile Include="Attributes\Names\ConsitentFirstNameRule.cs" />
     <Compile Include="Attributes\Required\ConsistentRequiredAttribute.cs" />
     <Compile Include="Caching\AspCacheProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
