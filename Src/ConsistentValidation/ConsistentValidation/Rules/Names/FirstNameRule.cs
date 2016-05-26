@@ -9,7 +9,7 @@ namespace ConsistentValidation.Rules.Names
         public const int MinLength = 2;
         public const int MaxLength = 255;
 
-        private readonly Regex Regex = new Regex("^[a-z]{2,255}$");
+        private readonly Regex Regex = new Regex("^[a-zA-Z-]{2,255}$");
 
         public override string DefaultMessageFormat => "Please fill in the '{0}' field with a valid name.";
 
